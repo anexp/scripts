@@ -10,7 +10,7 @@ case "$XDG_SESSION_TYPE" in
         xsel -bc &
 
         # current_clipboard_content="$(xclip -sel clip)"
-        notify-send -u low "Cleared Clipboard X11 CurValue= ${current_clipboard_content}" &
+        notify-send -u low "Cleared Clipboard X11 CurValue=[${current_clipboard_content}"] &
 		;;
 	("wayland")
 		printf "In wayland session \n"
