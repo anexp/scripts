@@ -294,7 +294,7 @@ launch_command_palette() {
             launch_lockscreen &
             ;;
         (clear-clipboard)
-            "$HOME/Documents/scripts/bin/clear_clipboard.sh" &
+            "$HOME/Documents/scripts/bin/clipboard_clear.sh" &
             ;;
         (qr-to-clipboard)
             qr_to_clipboard &
