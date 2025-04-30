@@ -2,13 +2,14 @@
 
 case "$XDG_SESSION_TYPE" in
 "x11")
-    printf "X11: "
     clipboard_content=$(xclip -selection clipboard -o 2>/dev/null)
 
     if [ -z "$clipboard_content" ]; then
-        printf "Empty"
+        # printf "Empty"
+        printf "X11"
     else
-        printf "Full"
+        # printf "Full"
+        printf "X11: Click"
     fi
     ;;
 "wayland")
