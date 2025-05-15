@@ -1,6 +1,8 @@
 #!/bin/sh
 
-notification_flag=true
+
+# no notifications by default
+notification_flag=false
 
 clear_clipboard() {
 
@@ -32,12 +34,15 @@ clear_clipboard() {
 
 main() {
     case "$1" in
-    no-notify)
+    -notify)
+        shift
+        notification_flag=true
+        ;;
+    -no-notify)
         shift
         notification_flag=false
         ;;
     *)
-        notification_flag=true
         ;;
     esac
 
